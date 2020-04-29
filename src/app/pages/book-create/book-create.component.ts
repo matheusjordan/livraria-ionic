@@ -36,7 +36,7 @@ export class BookCreateComponent implements OnInit {
       title: [null, Validators.required],
       editor: [null, Validators.required],
       picture: [null, Validators.required],
-      pages: [null, Validators.required]
+      pages: [null, [Validators.required]]
     });
   }
 
