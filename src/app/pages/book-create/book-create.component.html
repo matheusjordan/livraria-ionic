@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Adicionar livro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <form [formGroup]="bookForm">
+      <ion-item>
+        <ion-label position="floating">
+          Título
+        </ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Editora
+        </ion-label>
+        <ion-input type="text" formControlName="editor"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Páginas
+        </ion-label>
+        <ion-input type="text" formControlName="pages"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">
+          Imagem
+        </ion-label>
+        <ion-input type="text" formControlName="picture"></ion-input>
+      </ion-item>
+    </form>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="footer-container">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="cancel()">
+        cancelar
+      </ion-button>
+      <ion-button color="primary" (click)="save()" [disabled]="bookForm.invalid">
+        salvar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
